@@ -1,1 +1,13 @@
-sa
+x=int(input("Введите значение x: "))
+a_0=int(input('Введите значение a_0: '))
+eps=0.5e-6
+a_n=a_0
+n=1
+while True:
+    a_n_new = (a_n * x / a_n) / 2
+    if abs(a_n_new - a_n) < eps:
+        break
+    else:
+        a_n = a_n_new
+        n += 1
+print('Предел последовательности: ', a_n)
